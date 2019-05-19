@@ -1,15 +1,5 @@
 <%= form_with(model: @task, local:true) do |f| %>
  <%= render 'layouts/error_messages',model: f.object %>
-  <% if task.errors.any? %>
-    <div id = "error_explanation">
-      <ul>
-        <% task.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  
   <p>
     <%= f.label :content,'メッセージ'%>
     <%= f.text_field :content %>
